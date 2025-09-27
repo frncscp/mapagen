@@ -12,6 +12,7 @@ st.title("mapagen")
 supported_types = [
     "geojson",   # GeoJSON
     "json",      # GeoJSON / TopoJSON
+    "topojson",
     "gpkg",      # GeoPackage
     "kml",       # KML
     "kmz",       # KMZ
