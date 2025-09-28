@@ -8,6 +8,7 @@ st.set_page_config(
 )
 
 st.title("mapagen")
+st.caption("Si el archivo es un shapefile o carpeta comprimida, primero debe ser convertido a geojson acá: https://mapshaper.org/")
 
 supported_types = [
     "geojson",   # GeoJSON
@@ -25,8 +26,7 @@ supported_types = [
 
 mapa = st.file_uploader(label = "Sube el mapa a renderizar", type = supported_types)
 st.divider()
-
-try: 
-    loadMap(mapa)
-except Exception as e:
-    st.error("Archivo no soportado: " + str(e))
+#try: 
+loadMap(mapa)
+#except Exception as e:
+#    st.error("Archivo no soportado: " + str(e))
